@@ -1,5 +1,6 @@
 # api-rest-mongodb
 #Simple Rest API using MongoDB and Spring Boot
+
 Database:
 
 use rest_mongodb;
