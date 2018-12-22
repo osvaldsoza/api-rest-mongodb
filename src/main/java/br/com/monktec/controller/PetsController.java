@@ -31,6 +31,11 @@ public class PetsController {
 	public List<Pets> getAllPets() {
 		return petsService.getAllPets();
 	}
+	
+	@GetMapping("/specie")
+	public List<Pets> getAllPetsSpecie(@PathParam(value="species") String species){
+		return petsService.getAllPetsSpecie(species);
+	}
 
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Pets> getPetById(@PathVariable("id") ObjectId id) {

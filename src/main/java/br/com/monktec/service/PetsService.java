@@ -1,6 +1,7 @@
 package br.com.monktec.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,13 @@ public class PetsService {
 	
 	public List<Pets> getAllPets() {
 		return petsRepository.findAll();
+	}
+	
+	public List<Pets> getAllPetsSpecie(String species){
+		return petsRepository.findAll()
+				.stream()
+				.filter(p -> p.getSpecies().equals(species))
+				.collect(Collectors.toList());
 	}
 	
 	public Pets getPetById(ObjectId id) {
