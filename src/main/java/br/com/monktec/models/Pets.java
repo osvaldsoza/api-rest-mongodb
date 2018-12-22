@@ -11,17 +11,6 @@ public class Pets {
 	public String name;
 	public String species;
 	public String breed;
-	
-	public Pets() {
-		
-	}
-	
-	public Pets(ObjectId id, String name, String species, String breed) {
-		this.id = id;
-		this.name = name;
-		this.species = species;
-		this.breed = breed;
-	}
 
 	public ObjectId getId() {
 		return id;
